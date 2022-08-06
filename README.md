@@ -59,3 +59,75 @@ migrations/1659795724_deploy_memo.js ができた。
 
 migrationのコードを記述する。
 
+### デプロイする
+
+CLIでmigrateコマンドを実行する
+
+```
+truffle(develop)> migrate
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'develop'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0xca1c5359ed350e827e29e9f5eea7eaf466a96632692fe02c69b9fbc900a8a884
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xbbcEEB60e64492cF4046507E1A76DBD8145d250b
+   > block number:        1
+   > block timestamp:     1659796111
+   > account:             0xEDe4A94BC8B2729E4BA32b11be6fB80daA998C29
+   > balance:             99.99915573025
+   > gas used:            250154 (0x3d12a)
+   > gas price:           3.375 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00084426975 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:       0.00084426975 ETH
+
+
+1659795724_deploy_memo.js
+=========================
+
+   Deploying 'Memo'
+   ----------------
+   > transaction hash:    0xa8fb8887c9a3d80ee5d51cdf62beb8b81112e9e8379b2c6cd2bc511a4a360b29
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x67996f6402eAa9E485A068fAbdBc34020cf03b41
+   > block number:        3
+   > block timestamp:     1659796113
+   > account:             0xEDe4A94BC8B2729E4BA32b11be6fB80daA998C29
+   > balance:             99.997558022486759523
+   > gas used:            455391 (0x6f2df)
+   > gas price:           3.178366198 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001447399361273418 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.001447399361273418 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.002291669111273418 ETH
+```
+
+migrateしてdeployされると、 `build/contracts/Memo.json` の networksにaddressが記録されている。
+
