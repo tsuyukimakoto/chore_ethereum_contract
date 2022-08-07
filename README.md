@@ -40,3 +40,24 @@ $ touch contracts/HelloWorld.sol
 ```
 
 コントラクトを記述する
+
+### METAMASKとAlchemyをプロジェクトに設定する
+
+#### .env
+
+.envファイルを読み込んで環境変数に設定するためのモジュールをインストールする
+```
+$ npm install dotenv --save
+```
+
+.env.baseを作成した
+```
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+PRIVATE_KEY = "your-metamask-private-key"
+```
+
+.envにコピーして実際の値を入れていく
+
+API_URLはalchemyのサイトで作成したプロジェクトを表示して、VIEW KEYから、HTTPSのURLをコピーする。
+
+PRIVATE_KEYは、METAMASKの秘密鍵。METAMASK拡張のアカウントの詳細から秘密鍵のエクスポートを行う。
