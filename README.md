@@ -69,3 +69,6 @@ Ethers.jsはJSON-RPCをラップしてEthereumとのやりとりを簡単にす�
 ```
 $ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
+
+hardhat.config.js を記述する
+
