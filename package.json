@@ -1,0 +1,23 @@
+{
+  "name": "chore_ethereum_contract",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsuyukimakoto/chore_ethereum_contract.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/tsuyukimakoto/chore_ethereum_contract/issues"
+  },
+  "homepage": "https://github.com/tsuyukimakoto/chore_ethereum_contract#readme",
+  "devDependencies": {
+    "hardhat": "^2.10.1"
+  }
+}
