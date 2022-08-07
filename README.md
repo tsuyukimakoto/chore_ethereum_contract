@@ -190,3 +190,43 @@ update...
 しばらく（数秒から1分くらい？15秒くらいだった）すると完了する。
 
 続けて `await helloWorldContract.message();` すれば更新されたメッセージも得られる。
+
+
+## チュートリアル3 EtherscanにPublishする
+
+https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan
+
+### EtherscanのAPI KEYを設定する
+
+アカウントを持ってなかったら[ここ](https://etherscan.io/register) から登録する。
+
+API KEYはアカウントのAPI KEYのところからADDする
+
+.envにETHERSCAN_API_KEYとして設定する。
+
+### Hardhatからeherscanを使うモジュールをインストールする
+
+```
+npm install --save-dev @nomiclabs/hardhat-etherscan
+```
+
+hardhat.config.jsにetherscanについて記述を追加する
+```
+ require("dotenv").config();
+ require("@nomiclabs/hardhat-ethers");
++require("@nomiclabs/hardhat-etherscan");
+
+ const { API_URL, PRIVATE_KEY } = process.env;
++const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
+
+ module.exports = {
+   solidity: "0.8.9",
+@@ -15,4 +17,7 @@ module.exports = {
+       accounts: [`0x${PRIVATE_KEY}`],
+     },
+   },
++  etherscan: {
++    apiKey: ETHERSCAN_API_KEY,
++  },
+ };
+```
