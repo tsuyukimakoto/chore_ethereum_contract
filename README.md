@@ -165,3 +165,28 @@ The message is: Hello World from kamakura!
 ```
 
 取れてる！
+
+### メッセージを更新する
+
+interact.jsにmainに追記する
+
+```
+  ...
+  console.log("update...");
+  const tx = await helloworldContract.update(
+    "This is the new Message from kamakura."
+  );
+  await tx.wait();
+  ...
+```
+
+再びinteract.jsを実行する
+```
+$ npx hardhat run scripts/interact.js
+The message is: Hello World from kamakura!
+update...
+```
+
+しばらく（数秒から1分くらい？15秒くらいだった）すると完了する。
+
+続けて `await helloWorldContract.message();` すれば更新されたメッセージも得られる。

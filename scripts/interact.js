@@ -20,5 +20,11 @@ const helloworldContract = new ethers.Contract(
 async function main() {
   const message = await helloworldContract.message();
   console.log("The message is: " + message);
+
+  console.log("update...");
+  const tx = await helloworldContract.update(
+    "This is the new Message from kamakura."
+  );
+  await tx.wait();
 }
 main();
