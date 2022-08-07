@@ -230,3 +230,27 @@ hardhat.config.jsにetherscanについて記述を追加する
 +  },
  };
 ```
+
+### Etherscanでコントラクトを検証する
+
+DEPLOYED_CONTRACT_ADDRESS はデプロイ時に表示されたものを設定する。つまり、.envのCONTRACT_ADDRESSで良い。
+
+```
+$ npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World from kamakura!'
+
+... snip
+Successfully submitted source code for contract
+contracts/HelloWorld.sol:HelloWorld at 0x****************************************
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract HelloWorld on Etherscan.
+https://goerli.etherscan.io/address/0x****************************************#code
+```
+
+DEPLOYED_CONTRACT_ADDRESSの後ろの文字列を、デプロイ時のものと別のものにするとVerifyに失敗する
+```
+Error in plugin @nomiclabs/hardhat-etherscan: The contract verification failed.
+Reason: Fail - Unable to verify
+```
+
+成功時に表示されるURLを開くと、etherscan上でコードなどが見える。
