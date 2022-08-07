@@ -131,3 +131,19 @@ Summary
 
 migrateしてdeployされると、 `build/contracts/Memo.json` の networksにaddressが記録されている。
 
+### スマートコントラクトを実行する
+
+CLIで実行する
+
+> smartContractAddress = "0x67996f6402eAa9E485A068fAbdBc34020cf03b41"
+> abi = [];
+> let myAccount;
+> let contractInstance;
+> myAccount = (await web3.eth.getAccounts())[0];
+> contractInstance = new web3.eth.Contract(abi, smartContractAddress);
+
+現在の状態を確認する
+> result = await contractInstance.methods.message().call();
+
+methodsが空でうまく呼べない。CLIからやろうと思ったのがダメ？
+イメージとしてはこんな感じで大丈夫なはず
