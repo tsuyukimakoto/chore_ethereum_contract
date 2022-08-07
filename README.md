@@ -61,3 +61,11 @@ PRIVATE_KEY = "your-metamask-private-key"
 API_URLはalchemyのサイトで作成したプロジェクトを表示して、VIEW KEYから、HTTPSのURLをコピーする。
 
 PRIVATE_KEYは、METAMASKの秘密鍵。METAMASK拡張のアカウントの詳細から秘密鍵のエクスポートを行う。
+
+### Ethers.jsを使う
+
+Ethers.jsはJSON-RPCをラップしてEthereumとのやりとりを簡単にするライブラリらしい。
+
+```
+$ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
+```
