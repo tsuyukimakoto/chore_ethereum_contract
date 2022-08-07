@@ -125,3 +125,13 @@ API_KEYはalchemyのプロジェクトにあるVIEW KEYから見えるAPI KEYを
 
 CONTRACT_ADDRESSはデプロイ時に表示されたものを設定する。
 
+### ABI
+
+コントラクトのABI(Application Binary Interface)を読み込む。
+
+Hardhatがartifacts/contracts/HelloWorld.sol/HelloWorld.json を生成してくれている。
+
+interact.jsに追記する
+```
+const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json");
+```
