@@ -72,3 +72,35 @@ $ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 hardhat.config.js を記述する
 
+### コントラクトをcompileする
+
+```
+$ npx hardhat compile
+```
+
+### コントラクトをdeployする
+
+まずは、デプロイスクリプトを書く
+
+```
+$ touch scripts/deploy.js
+```
+
+詳しくはHardhatのチュートリアルを読むと良さそう
+https://hardhat.org/tutorial/testing-contracts#writing-tests
+
+### デプロイ
+
+```
+$ npx hardhat run scripts/deploy.js --network goerli
+Contract deployed to address: 0x****************************************
+```
+
+deploy.jsでaddressを出力するようにしてあるのでaddressが表示された
+
+ehterscanに行ってaddressを検索すると、 Contract Creation のトランザクションが。デプロイできてるっぽい。
+
+Txt Fee（トランザクションフィー）として0.00039982かかったらしい。ガス代というやつだな。
+
+METAMASKを見ると、その分が減っている。
+
