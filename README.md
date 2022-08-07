@@ -4,7 +4,7 @@
 
 - https://www.tsuyukimakoto.com/blog/2022/08/06/get_ethereum_test_network_token/
 
-## チュートリアル
+## チュートリアル1
 
 - https://docs.alchemy.com/docs/hello-world-smart-contract
 
@@ -103,4 +103,25 @@ deploy.jsでaddressを出力するようにしてあるのでaddressが表示さ
 Txt Fee（トランザクションフィー）として0.00039982かかったらしい。ガス代というやつだな。
 
 METAMASKを見ると、その分が減っている。
+
+## チュートリアル2 スマートコントラクトを使う
+
+https://docs.alchemy.com/docs/interacting-with-a-smart-contract
+
+### interact.js
+
+インタラクションスクリプトを書く。
+
+scripts/interact.jsを作成して書く
+```
+$ touch scripts/interact.js
+```
+
+.envファイルを更新する
+
+API_KEYとCONTRACT_ADDRESSを追加する。
+
+API_KEYはalchemyのプロジェクトにあるVIEW KEYから見えるAPI KEYを設定する。
+
+CONTRACT_ADDRESSはデプロイ時に表示されたものを設定する。
 
