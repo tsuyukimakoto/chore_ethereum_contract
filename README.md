@@ -98,7 +98,7 @@ Contract deployed to address: 0x****************************************
 
 deploy.jsでaddressを出力するようにしてあるのでaddressが表示された
 
-ehterscanに行ってaddressを検索すると、 Contract Creation のトランザクションが。デプロイできてるっぽい。
+[ehterscan](https://goerli.etherscan.io/)に行ってaddressを検索すると、 Contract Creation のトランザクションが。デプロイできてるっぽい。
 
 Txt Fee（トランザクションフィー）として0.00039982かかったらしい。ガス代というやつだな。
 
