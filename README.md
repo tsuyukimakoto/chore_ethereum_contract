@@ -144,3 +144,24 @@ interact.jsに追記してコントラクトのインスタンスを生成する
   - Provider - blockchainを読み書きする
   - Signer - トランザクションにサインするEthereumアカウント
   - Contract - チェーン上の特定のコントラクト
+
+### イニシャルのメッセージを取得する
+
+interact.jsに追記する
+
+デプロイした時点のメッセージを取得する
+```
+async function main() {
+  const message = await helloWorldContract.message();
+  console.log("The message is: " + message);
+}
+main();
+```
+
+interact.jsを実行する
+```
+$ npx hardhat run scripts/interact.js
+The message is: Hello World from kamakura!
+```
+
+取れてる！

@@ -16,3 +16,9 @@ const helloworldContract = new ethers.Contract(
   contract.abi,
   signer
 );
+
+async function main() {
+  const message = await helloworldContract.message();
+  console.log("The message is: " + message);
+}
+main();
