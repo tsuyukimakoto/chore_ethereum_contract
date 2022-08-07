@@ -135,3 +135,12 @@ interact.jsに追記する
 ```
 const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json");
 ```
+
+### コントラクトを取り出す
+
+interact.jsに追記してコントラクトのインスタンスを生成する。
+
+- Ether.jsの流儀
+  - Provider - blockchainを読み書きする
+  - Signer - トランザクションにサインするEthereumアカウント
+  - Contract - チェーン上の特定のコントラクト
